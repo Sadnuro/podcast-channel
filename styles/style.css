@@ -1,0 +1,296 @@
+@charset "UTF-8";
+:root {
+  --background-color: #FFFFFF;
+  --secondary-color: #00F3BB;
+  --text-color: #060A24;
+  --gradient: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --desktop-breakpoint: 1024px;
+  --line-height: 24px;
+  --font-size: 16px;
+  --margins: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: unset;
+  text-decoration: unset;
+}
+
+h2, h3, p {
+  color: var(--text-color);
+}
+
+h2.title {
+  font-family: var(--font-sans);
+  line-height: 42px;
+  font-size: 36px;
+  margin-bottom: var(--margins);
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 50px;
+  font-family: var(--font-mono);
+}
+
+.butom {
+  width: 100%;
+  height: 48px;
+  padding: var(--margins) 0;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.contenido-extra {
+  position: relative;
+  bottom: 150px;
+}
+
+header {
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid black;
+  background-color: var(--background-color);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav {
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+}
+
+header nav details {
+  width: 100%;
+  height: 224px;
+}
+
+header nav details summary {
+  width: 25px;
+  padding: 10px 0;
+  margin-left: 95%;
+  line-height: 22px;
+  list-style: none;
+  font-size: 22px;
+}
+
+header nav details summary::before {
+  content: "☰";
+}
+
+header nav details[open] summary::before {
+  content: "×";
+  font-size: 35px;
+}
+
+header nav details ul {
+  background: var(--gradient);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav details ul li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+header nav details ul li a {
+  color: white;
+}
+
+.logo-container {
+  width: 24px;
+  height: 24px;
+  margin: 10px 0px 10px 16px;
+}
+
+.logo {
+  fill: var(--background-color);
+}
+
+.intro-section {
+  margin: 20px var(--margins);
+  background: var(--background-color);
+}
+
+.poligono-episodios {
+  width: 100%;
+  padding: 100px var(--margins);
+  padding-bottom: 200px;
+  -webkit-clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
+          clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
+  background: var(--gradient);
+}
+
+.poligono-episodios h2.title {
+  color: white;
+}
+
+.poligono-episodios .episodes-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.poligono-episodios .episodes-container .episode {
+  width: 100%;
+  height: 200px;
+  margin: 5px 0;
+  background: gray;
+  border: 1px solid black;
+}
+
+.de-donde-venimos {
+  width: 100%;
+  margin: var(--margins);
+}
+
+.de-donde-venimos .img-origin {
+  width: calc(100% - 16px);
+  z-index: 3;
+}
+
+.de-donde-venimos .img-origin img {
+  width: 100%;
+}
+
+.de-donde-venimos .text {
+  padding-right: 16px;
+}
+
+.invitados {
+  margin: var(--margins);
+  background: var(--background-color);
+}
+
+.invitados .image {
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.invitados .img-1 img {
+  width: 100%;
+}
+
+.invitados .img-2 img {
+  width: 100%;
+}
+
+.invitados .img-3 img {
+  width: 100%;
+}
+
+.invitados .img-4 img {
+  width: 100%;
+}
+
+.invitados .img-5 img {
+  width: 100%;
+}
+
+.invitados .img-6 img {
+  width: 100%;
+}
+
+.otros-temas {
+  background-color: var(--background-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: var(--margins);
+  margin-top: 50px;
+}
+
+.box-temas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.noticias {
+  width: 100%;
+  height: 341px;
+  padding: var(--margins);
+  -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  background: var(--gradient);
+}
+
+.noticias h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 36px;
+  margin-top: 64px;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+.poligono-episodios {
+    width: 100%;
+    padding: 100px var(--margins);
+    padding-bottom: 200px ;
+    clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
+    background: var(--gradient);
+    h2.title {
+        // margin-left: var(--margins);
+        color: white;
+    }
+    .episodes-container {
+        // padding: var(--margins);
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .episode {
+            width: 100%;
+            height: 200px;
+            margin: 5px 0;
+            background: gray;
+            border: 1px solid black;
+        }
+        // .episode-4 {
+        //     margin-bottom: 100px;
+        // }
+    } 
+}
