@@ -15,13 +15,11 @@
         align-items: center;
         .episode {
             width: 100%;
-            height: 200px;
             margin: 5px 0;
-            background: gray;
-            border: 1px solid black;
+            border-radius: 5px;
         }
-        // .episode-4 {
-        //     margin-bottom: 100px;
+        // iframe {
+        //     width: 100%;
         // }
     } 
 }

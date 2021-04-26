@@ -1,11 +1,17 @@
 .de-donde-venimos {
     width: 100%;
-    margin: var(--margins);
+    height: calc(auto - 200px);
+    margin: 0 var(--margins) 30px var(--margins);
+    h2 {
+        position: relative;
+        top: -70px;
+    }
+
     .img-origin {
         width:calc(100% - 16px);
         z-index: 3;
-        // position: relative;
-        // top: -150px;
+        position: relative;
+        top: -150px;
         img {
             width: 100%;
             // position: relative;
@@ -13,6 +19,11 @@
         }
     }
     .text {
+        position: relative;
+        top: -50px;
         padding-right: 16px;
+    }
+    p {
+        margin-bottom: 20px;
     }
 } 

@@ -3,6 +3,10 @@
     background: var(--background-color);
     // display: flex;
     // flex-flow: row wrap;
+    h2{
+        position: relative;
+        top: -30px;
+    }
     .image {
         width: 100%;
         margin: 0;

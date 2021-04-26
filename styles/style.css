@@ -42,7 +42,6 @@ h3 {
 }
 
 p {
-  margin-bottom: 50px;
   font-family: var(--font-mono);
 }
 
@@ -55,11 +54,6 @@ p {
   text-align: center;
   font-family: var(--font-mono);
   font-weight: 500;
-}
-
-.contenido-extra {
-  position: relative;
-  bottom: 150px;
 }
 
 header {
@@ -98,6 +92,7 @@ header nav details summary {
   line-height: 22px;
   list-style: none;
   font-size: 22px;
+  cursor: pointer;
 }
 
 header nav details summary::before {
@@ -179,20 +174,26 @@ header nav details ul li a {
 
 .poligono-episodios .episodes-container .episode {
   width: 100%;
-  height: 200px;
   margin: 5px 0;
-  background: gray;
-  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .de-donde-venimos {
   width: 100%;
-  margin: var(--margins);
+  height: calc(auto - 200px);
+  margin: 0 var(--margins) 30px var(--margins);
+}
+
+.de-donde-venimos h2 {
+  position: relative;
+  top: -70px;
 }
 
 .de-donde-venimos .img-origin {
   width: calc(100% - 16px);
   z-index: 3;
+  position: relative;
+  top: -150px;
 }
 
 .de-donde-venimos .img-origin img {
@@ -200,12 +201,23 @@ header nav details ul li a {
 }
 
 .de-donde-venimos .text {
+  position: relative;
+  top: -50px;
   padding-right: 16px;
+}
+
+.de-donde-venimos p {
+  margin-bottom: 20px;
 }
 
 .invitados {
   margin: var(--margins);
   background: var(--background-color);
+}
+
+.invitados h2 {
+  position: relative;
+  top: -30px;
 }
 
 .invitados .image {
@@ -291,6 +303,37 @@ header nav details ul li a {
 }
 
 footer {
+  padding-top: 20px;
+  margin: 0 30px;
+  height: 120px;
   text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+footer .redes {
+  width: 100%;
+  height: 28px;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .redes .social {
+  width: 14px;
+  height: 28px;
+  margin: 0 20px;
+}
+
+footer .redes .social img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
