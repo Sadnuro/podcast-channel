@@ -10,7 +10,7 @@
     <title>Podcast channel</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <svg class="logo-container" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Landing-podcast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="UI-Kit_draft" transform="translate(-537.000000, -1375.000000)">
@@ -33,18 +33,18 @@
             <details>
                 <summary class="content-menu"></summary>
                 <ul>
-                    <li><a href="#inicio">EPISODIOS</a></li>
+                    <li><a href="#episodios">EPISODIOS</a></li>
                     <li><a href="#de-donde-venimos">NOSOTROS</a></li>
                     <li><a href="#invitados">ENTREVISTAS</a></li>
                     <li><a href="#otros-temas">TÓPICOS</a></li>
                 </ul>
             </details>
         </nav>
-
     </header>
 
+
     <!-- ------------------ INICIO ------------------------ -->
-    <a id="inicio"></a>
+    
     <section class="intro-section">
         <h2 class="title"> Hello <span>world</span> pale blue dot.</h2>
         <p>
@@ -58,23 +58,26 @@
 
     <!-- ------------------ EPISODIOS ------------------------ -->
     <a id="episodios"></a>
-    <section class="poligono-episodios">
-        <h2 class="title">Episodios</h2>
-        <div class="episodes-container">
-            <div class="episode episode-1">
-                <iframe src="https://open.spotify.com/embed-podcast/episode/30R85X126Pqt62O2nCZui1" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="container-polygon">
+        <section class="poligono-episodios">
+            <h2 class="title">Episodios</h2>
+            <div class="episodes-container">
+                <div class="episode episode-1">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/30R85X126Pqt62O2nCZui1" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="episode episode-2">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/3f3AdnzsuiP3qUjFoFX4pK" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="episode episode-3">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/6549nyyHoCfeRCpYAWt8bb" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="episode episode-4">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/2T3efMeYMLY9FFbeyKkUtv" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
             </div>
-            <div class="episode episode-2">
-                <iframe src="https://open.spotify.com/embed-podcast/episode/3f3AdnzsuiP3qUjFoFX4pK" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
-            <div class="episode episode-3">
-                <iframe src="https://open.spotify.com/embed-podcast/episode/6549nyyHoCfeRCpYAWt8bb" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
-            <div class="episode episode-4">
-                <iframe src="https://open.spotify.com/embed-podcast/episode/2T3efMeYMLY9FFbeyKkUtv" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
     <!-- ------------------ CONTENIDO EXTRA ------------------------ -->
     <div class="contenido-extra">
         <a id="de-donde-venimos"></a>
@@ -155,7 +158,7 @@
         <section class="noticias">
             <div>
                 <h2 class="title">¿Querés las últimas novedades?</h2>
-                <a class="a-btm-news" href="">
+                <a class="a-btm-news" href="#episodios">
                     <div class="butom-news butom">ESCUCHÁ LOS EPISODIOS</div>
                 </a>
             </div>

@@ -58,10 +58,8 @@ p {
 
 header {
   width: 100%;
-  height: 44px;
   border-bottom: 1px solid black;
   background-color: var(--background-color);
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,46 +67,54 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+
+header .logo {
+  fill: var(--background-color);
 }
 
 header nav {
   width: 100%;
-  z-index: 3;
-  position: absolute;
-}
-
-header nav details {
-  width: 100%;
-  height: 224px;
 }
 
 header nav details summary {
   width: 25px;
-  padding: 10px 0;
-  margin-left: 95%;
-  line-height: 22px;
+  height: 44px;
+  padding-top: 10px;
+  float: right;
   list-style: none;
-  font-size: 22px;
-  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-header nav details summary::before {
+header nav details summary:before {
   content: "☰";
 }
 
-header nav details[open] summary::before {
+header nav details[open] summary {
+  padding-top: 5px;
+}
+
+header nav details[open] summary:before {
   content: "×";
-  font-size: 35px;
+  font-size: 32px;
 }
 
 header nav details ul {
-  background: var(--gradient);
   width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 200px;
+  background: var(--gradient);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,25 +137,25 @@ header nav details ul li a {
   color: white;
 }
 
-.logo-container {
-  width: 24px;
-  height: 24px;
-  margin: 10px 0px 10px 16px;
-}
-
-.logo {
-  fill: var(--background-color);
-}
-
 .intro-section {
   margin: 20px var(--margins);
   background: var(--background-color);
 }
 
+.intro-section p {
+  margin-bottom: 36px;
+}
+
+.container-polygon {
+  width: 100%;
+  height: 1242px;
+  overflow: visible;
+}
+
 .poligono-episodios {
   width: 100%;
   padding: 100px var(--margins);
-  padding-bottom: 200px;
+  padding-bottom: 250px;
   -webkit-clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
           clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
   background: var(--gradient);
@@ -184,16 +190,10 @@ header nav details ul li a {
   margin: 0 var(--margins) 30px var(--margins);
 }
 
-.de-donde-venimos h2 {
-  position: relative;
-  top: -70px;
-}
-
 .de-donde-venimos .img-origin {
   width: calc(100% - 16px);
-  z-index: 3;
   position: relative;
-  top: -150px;
+  top: -0px;
 }
 
 .de-donde-venimos .img-origin img {
@@ -201,8 +201,6 @@ header nav details ul li a {
 }
 
 .de-donde-venimos .text {
-  position: relative;
-  top: -50px;
   padding-right: 16px;
 }
 
@@ -216,8 +214,7 @@ header nav details ul li a {
 }
 
 .invitados h2 {
-  position: relative;
-  top: -30px;
+  margin-top: 50px;
 }
 
 .invitados .image {

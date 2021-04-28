@@ -1,26 +1,20 @@
+// .contenido-extra {
+//     z-index: 4;
+// }
 .de-donde-venimos {
     width: 100%;
     height: calc(auto - 200px);
     margin: 0 var(--margins) 30px var(--margins);
-    h2 {
-        position: relative;
-        top: -70px;
-    }
-
     .img-origin {
         width:calc(100% - 16px);
-        z-index: 3;
+        // z-index: 3;
         position: relative;
-        top: -150px;
+        top: -0px;
         img {
             width: 100%;
-            // position: relative;
-            // top: -150px;
         }
     }
     .text {
-        position: relative;
-        top: -50px;
         padding-right: 16px;
     }
     p {
