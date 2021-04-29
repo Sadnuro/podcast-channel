@@ -1,13 +1,11 @@
-// .contenido-extra {
-//     z-index: 4;
-// }
 .de-donde-venimos {
     width: 100%;
     height: calc(auto - 200px);
     margin: 0 var(--margins) 30px var(--margins);
+    display: flex;
+    justify-content: center;
     .img-origin {
         width:calc(100% - 16px);
-        // z-index: 3;
         position: relative;
         top: -0px;
         img {

@@ -1,7 +1,5 @@
 header {
     width: 100%;
-    // height: 44px;
-    border-bottom: 1px solid black;
     background-color: var(--background-color);
     display: flex;
     flex-flow: row nowrap;
@@ -18,119 +16,48 @@ header {
         fill: var(--background-color);
     }
     
-nav {
-    // display: inline-block;
-    width: 100%;
-    details {
-        // padding-right: var(--margins);
-        summary{
-            width: 25px;
-            height: 44px;
-            padding-top: 10px;
-            float: right;
-            list-style: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        summary:before {
-            content: "☰";
-        }
-        &[open] {
-            summary {
-                padding-top: 5px;
-            }
-            summary:before{
-                content: "×";
-                font-size: 32px;
-            }
-        }
-        ul {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient);
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-around;
-            li {
+    nav {
+        width: 100%;
+        details {
+            summary{
+                width: 25px;
+                height: 44px;
+                padding-top: 10px;
+                float: right;
                 list-style: none;
-                font-size: 16px;
-                line-height: 28px;
-                text-align: center;
-                a {
-                    color: white;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            summary:before {
+                content: "☰";
+            }
+            &[open] {
+                summary {
+                    padding-top: 5px;
+                }
+                summary:before{
+                    content: "×";
+                    font-size: 32px;
                 }
             }
-        } 
+            ul {
+                width: 100%;
+                height: 200px;
+                background: var(--gradient);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                li {
+                    list-style: none;
+                    font-size: 16px;
+                    line-height: 28px;
+                    text-align: center;
+                    a {
+                        color: white;
+                    }
+                }
+            } 
+        }
+
     }
-
 }
-}
-
-
-
-// header {
-//     width: 100%;
-//     border-bottom: 1px solid black;
-//     background-color: var(--background-color);
-//     // position: relative;
-//     display: flex;
-//     flex-flow: row nowrap;
-//     justify-content: space-between;
-
-//     nav{
-//         width: 100%;
-//         height: 40px;
-//         // z-index: 3;
-//         // position: absolute;
-//         details {
-//             width: 100%;
-//             height: 224px;
-//             // border: 1px solid black;
-//             summary{
-//                 width: 25px;
-//                 padding: 10px 0;
-//                 margin-left: 95%;
-//                 line-height: 22px;
-//                 list-style: none;
-//                 font-size: 22px;
-//                 cursor: pointer;
-//             }
-//             summary::before {
-//                 content: "☰";
-
-//             }
-//             &[open] {
-//                 summary::before {
-//                     content: "×";
-//                     font-size: 35px;
-//                 }
-//             }
-//             ul {
-//                 background: var(--gradient);
-//                 width: 100%;
-//                 height: 100%;
-//                 margin: 0;
-//                 display: flex;
-//                 flex-flow: column nowrap;
-//                 justify-content: space-around;
-//                 li {
-//                     list-style: none;
-//                     font-size: 16px;
-//                     line-height: 28px;
-//                     text-align: center;
-//                     a {
-//                         color: white;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// .logo-container {
-//     width: 24px;
-//     height: 24px;
-//     margin: 10px 0px 10px 16px;
-// }
-// .logo {
-//     fill: var(--background-color);
-//   }

@@ -1,0 +1,230 @@
+@media screen and (min-width: 1024px) {
+    header {
+        // margin: 22px 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 100px;
+        border: 1px solid black;
+        svg {
+            width: 36px;
+            height: 36px;
+            position: static;
+        }
+        nav {
+            height: 40px;
+            width: 100%;
+            details{
+                height: 40px;
+                display: flex;
+                flex-flow: row nowrap;
+                summary {
+                    display: none;
+                    position: relative;
+                    top: 0;
+                }
+                summary:before {
+                    content: "";
+                }
+                ul {
+                    height: 40px;
+                    width: 100%;
+                    li {
+                        height: 40px;
+                        border: 1px solid black;
+                        a{
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // INTRO SECTION -----------------------
+    .intro-section {
+        margin: 20px 100px;
+        // display: flex;
+        // flex-flow: row wrap;
+        .title {
+            font-size: 64px;
+            line-height: 84px;
+        }
+        p {
+            width: 628px;
+            height: 48px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .butom-more {
+            width: 226px;
+            height: 56px;
+            margin-bottom: 5px;
+        }
+
+    }
+
+    // PODCAST SECTION -------------------
+    .container-polygon {
+        height: 900px;
+        overflow: visible;
+        .poligono-episodios {
+            height: 1042px;
+            padding: 186px 100px 232px 100px;
+            clip-path: polygon(0% 120px, 100% 0%, 100% calc(100% - 120px), 0% 100%);
+            
+            h2 {
+                font-size: 48px;
+                line-height: 64px;
+            }
+            .episodes-container {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr 1fr;
+                grid-gap: 72px;
+                .episode {
+                    width: 100%;
+                    height: 232px;
+                }
+            }
+        }
+    }
+
+    // ORIGIN SECTION ---------------------------
+    .de-donde-venimos {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 0px 200px 100px 200px;
+        .img-origin {
+            width: 468px;
+            height: 660px;
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            margin-top: 20px;
+            margin-left: 62px;
+            width: 464px;
+            height: auto;
+            display: flex;
+            flex-flow: column nowrap;
+            h2 {
+                font-size: 48px;
+                line-height: 62px;
+                margin-bottom: 24px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    // STELLAR GUESTS SECTION ---------------------
+    .invitados {
+        padding: 0px 100px;
+        margin: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        h2 {
+            font-size: 48px;
+            line-height: 64px;
+            padding-left: 100px;
+        }
+        .guests-images {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            .image {
+                width: 480px;
+                height: 364px;
+            }
+        }
+    }
+
+    // TOPICS SECTION ----------------------
+    .otros-temas {
+        display: flex;
+        flex-flow: column nowrap;
+        h2 {
+            font-size: 48px;
+            line-height: 64px;
+            margin-bottom: 56px;
+        }
+        .container-topics {
+            width: 100%;
+            margin-bottom: 32px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            .box-temas {
+                width: 220px;
+                margin: 0;
+                display: flex;
+                flex-flow: column nowrap;
+                // .topic-svg-container {
+                //     display: flex;
+                //     justify-items: center;
+                // }
+                h3 {
+                    width: 220px;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+
+        }
+    }
+
+    // NEWS SECTION -------------------------------
+    .noticias {
+        width: 100%;
+        height: 518px;
+        clip-path: polygon(0% 120px, 100% 0%, 100% 100%, 0% 100%);
+        padding-top: 213px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        div {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            h2 {
+                margin-top: 0;
+            }
+            .butom-news {
+                width: 345px;
+                height: 56px;
+    
+            }
+
+        }
+
+    }
+
+    // FOOTER -----------------------------------
+    footer {
+        height: 80px;
+        margin: 0;
+        padding: 0 100px;
+        padding-top: 25px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        p {
+            width: 269px;
+            height: 28px;
+        }
+        .redes {
+            margin:0;
+            width: 234px;
+            height: 38px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            .social{
+                margin: 0;
+            }
+        }
+    }
+}
