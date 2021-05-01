@@ -2,47 +2,74 @@
     header {
         // margin: 22px 100px;
         display: flex;
+        flex-flow: row nowrap;
         justify-content: space-between;
         padding: 22px 100px;
-        border: 1px solid black;
         svg {
             width: 36px;
             height: 36px;
             position: static;
         }
-        nav {
+        nav.mobile {
+            // height: 40px;
+            // width: 100%;
+            display: none;
+            // details{
+            //     height: 40px;
+            //     display: flex;
+            //     flex-flow: row nowrap;
+            //     summary {
+            //         display: none;
+            //         position: relative;
+            //         top: 0;
+            //     }
+            //     summary:before {
+            //         content: "";
+            //     }
+            }
+            nav.desktop {
             height: 40px;
             width: 100%;
-            details{
-                height: 40px;
-                display: flex;
-                flex-flow: row nowrap;
-                summary {
-                    display: none;
-                    position: relative;
-                    top: 0;
-                }
-                summary:before {
-                    content: "";
-                }
+            border: 0;
                 ul {
-                    height: 40px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-end;
                     width: 100%;
+                    height: 40px;
+                    background: white;
+                    list-style: none;
                     li {
                         height: 40px;
-                        border: 1px solid black;
+                        padding: 10px 0;
+                        margin-left: 48px;
+                        border: 0;
                         a{
+                            line-height: auto;
+                            font-size: 16px;
+                            font-family: var(--font-mono);
+                            font-weight: 400;
                             color: black;
+                        }
+                        a:hover {
+                            color: #00F3BB ; 
+                            font-weight: 500;
+                            text-decoration: line-through;
+                        }
+                        a:active {
+                            color: #060A24;
+                            font-weight: 400;
+                            text-decoration: line-through;
                         }
                     }
                 }
-            }
+            // }
         }
     }
 
     // INTRO SECTION -----------------------
     .intro-section {
-        margin: 20px 100px;
+        margin: 120px 200px 10px 200px;
         // display: flex;
         // flex-flow: row wrap;
         .title {
@@ -69,7 +96,7 @@
         overflow: visible;
         .poligono-episodios {
             height: 1042px;
-            padding: 186px 100px 232px 100px;
+            padding: 186px 200px 232px 200px;
             clip-path: polygon(0% 120px, 100% 0%, 100% calc(100% - 120px), 0% 100%);
             
             h2 {
@@ -122,7 +149,7 @@
 
     // STELLAR GUESTS SECTION ---------------------
     .invitados {
-        padding: 0px 100px;
+        // padding: 0px 200px;
         margin: 0px;
         display: flex;
         flex-flow: column nowrap;
@@ -146,6 +173,7 @@
     .otros-temas {
         display: flex;
         flex-flow: column nowrap;
+        padding: 0 200px;
         h2 {
             font-size: 48px;
             line-height: 64px;
@@ -160,16 +188,19 @@
             .box-temas {
                 width: 220px;
                 margin: 0;
-                display: flex;
-                flex-flow: column nowrap;
-                // .topic-svg-container {
-                //     display: flex;
-                //     justify-items: center;
-                // }
+                // display: flex;
+                // flex-flow: column nowrap;
+                // align-items: center;
+                .topic-svg-container {
+                    margin: 0 auto;
+                }
                 h3 {
-                    width: 220px;
+                    padding: 10px;
+                    width: auto;
                     font-size: 24px;
                     line-height: 32px;
+                    text-align: center;
+                    margin: 0 auto;
                 }
             }
 
@@ -195,11 +226,8 @@
             .butom-news {
                 width: 345px;
                 height: 56px;
-    
             }
-
         }
-
     }
 
     // FOOTER -----------------------------------

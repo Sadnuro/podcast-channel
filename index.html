@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Podcast channel</title>
+    <title>Pale blue dot</title>
 </head>
 <body>
     <header class="header">
@@ -29,8 +29,8 @@
                 </g>
             </g>
         </svg>
-        <nav>
-            <details>
+        <nav class="mobile">
+            <details class="main-menu" id="details" close>
                 <summary class="content-menu"></summary>
                 <ul>
                     <li><a href="#episodios">EPISODIOS</a></li>
@@ -40,13 +40,21 @@
                 </ul>
             </details>
         </nav>
+        <nav class="desktop">
+            <ul>
+                <li><a href="#episodios">EPISODIOS</a></li>
+                <li><a href="#de-donde-venimos">NOSOTROS</a></li>
+                <li><a href="#invitados">ENTREVISTAS</a></li>
+                <li><a href="#otros-temas">TÓPICOS</a></li>
+            </ul>
+        </nav>
     </header>
 
 
     <!-- ------------------ INICIO ------------------------ -->
     
     <section class="intro-section">
-        <h2 class="title"> Hello <span>world</span> pale blue dot.</h2>
+        <h2 class="title"> Hello <span>world</span> pale blue dot<span id="punto">.</span></h2>
         <p>
             Un podcast que explora el mundo de la programación.
             Nuevos episodios, todos los jueves cada 15 días.
@@ -174,21 +182,40 @@
         <p>© 2019 - Hello blue pale dot</p>
         <div class="redes">
             <div class="social spotify">
-                <img src="/images/social/spotify.png" alt="">
+                <a href="#">
+                    <img src="/images/social/spotify.png" alt="">
+                </a>
             </div>
             <div class="social instagram">
-                <img src="/images/social/instagram.png" alt="">
+                <a href="#">
+                    <img src="/images/social/instagram.png" alt="">
+                </a>
             </div>
             <div class="social twitter">
-                <img src="/images/social/twitterpng.png" alt="">
+                <a href="#">
+                    <img src="/images/social/twitterpng.png" alt="">
+                </a>
             </div>
             <div class="social facebook">
-                <img src="/images/social/facebook.png" alt="">
+                <a href="#">
+                    <img src="/images/social/facebook.png" alt="">
+                </a>
             </div>
             <div class="social telegram">
-                <img src="/images/social/telegram.png" alt="">
+                <a href="#">
+                    <img src="/images/social/telegram.png" alt="">
+                </a>
             </div>
         </div>
     </footer>
+    <!-- <script>
+        // const mainMenu = element.getAttribute("main-menu")
+        let $mainMenuDOM = document.querySelector(".main-menu");
+        console.log($mainMenuDOM.dataset);
+        // console.log($mainMenuDOM.hasAttribute("open"));
+        console.log($mainMenuDOM.hasAttribute());
+        // console.log($mainMenuDOM.setAttribute("close", false));
+
+    </script> -->
 </body>
 </html>

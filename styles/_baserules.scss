@@ -6,6 +6,9 @@
     outline: unset;
     text-decoration: unset;
 }
+header a {
+    font-family: var(--font-mono);
+}
 
 h2, h3, p {
     color: var(--text-color);
@@ -34,5 +37,12 @@ p {
     color: var(--text-color);
     text-align: center;
     font-family: var(--font-mono);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight:  500;
+}
+.butom:hover {
+    background: linear-gradient(90deg, #00F0B8 , #0000FE);
+    color: white;
     font-weight:  500;
 }

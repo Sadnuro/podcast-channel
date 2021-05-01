@@ -22,6 +22,10 @@
   text-decoration: unset;
 }
 
+header a {
+  font-family: var(--font-mono);
+}
+
 h2, h3, p {
   color: var(--text-color);
 }
@@ -53,6 +57,15 @@ p {
   color: var(--text-color);
   text-align: center;
   font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.butom:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00F0B8), to(#0000FE));
+  background: linear-gradient(90deg, #00F0B8, #0000FE);
+  color: white;
   font-weight: 500;
 }
 
@@ -83,11 +96,15 @@ header .logo {
   fill: var(--background-color);
 }
 
-header nav {
+header nav.desktop {
+  display: none;
+}
+
+header nav.mobile {
   width: 100%;
 }
 
-header nav details summary {
+header nav.mobile details summary {
   width: 25px;
   height: 44px;
   padding-top: 10px;
@@ -97,20 +114,20 @@ header nav details summary {
   font-weight: bold;
 }
 
-header nav details summary:before {
+header nav.mobile details summary:before {
   content: "☰";
 }
 
-header nav details[open] summary {
+header nav.mobile details[open] summary {
   padding-top: 5px;
 }
 
-header nav details[open] summary:before {
+header nav.mobile details[open] summary:before {
   content: "×";
   font-size: 32px;
 }
 
-header nav details ul {
+header nav.mobile details ul {
   width: 100%;
   height: 200px;
   background: var(--gradient);
@@ -125,20 +142,26 @@ header nav details ul {
       justify-content: space-around;
 }
 
-header nav details ul li {
-  list-style: none;
+header nav.mobile details ul li {
+  padding-left: 16px;
   font-size: 16px;
   line-height: 28px;
-  text-align: center;
+  text-align: left;
+  list-style: none;
 }
 
-header nav details ul li a {
+header nav.mobile details ul li a {
   color: white;
 }
 
 .intro-section {
   margin: 20px var(--margins);
   background: var(--background-color);
+}
+
+.intro-section h2 .punto {
+  border-radius: 50%;
+  color: #0000FF;
 }
 
 .intro-section p {
@@ -190,6 +213,10 @@ header nav details ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -344,23 +371,29 @@ footer .redes .social img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 22px 100px;
-    border: 1px solid black;
   }
   header svg {
     width: 36px;
     height: 36px;
     position: static;
   }
-  header nav {
+  header nav.mobile {
+    display: none;
+  }
+  header nav.desktop {
     height: 40px;
     width: 100%;
+    border: 0;
   }
-  header nav details {
-    height: 40px;
+  header nav.desktop ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -368,28 +401,39 @@ footer .redes .social img {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-  }
-  header nav details summary {
-    display: none;
-    position: relative;
-    top: 0;
-  }
-  header nav details summary:before {
-    content: "";
-  }
-  header nav details ul {
-    height: 40px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 100%;
-  }
-  header nav details ul li {
     height: 40px;
-    border: 1px solid black;
+    background: white;
+    list-style: none;
   }
-  header nav details ul li a {
+  header nav.desktop ul li {
+    height: 40px;
+    padding: 10px 0;
+    margin-left: 48px;
+    border: 0;
+  }
+  header nav.desktop ul li a {
+    line-height: auto;
+    font-size: 16px;
+    font-family: var(--font-mono);
+    font-weight: 400;
     color: black;
   }
+  header nav.desktop ul li a:hover {
+    color: #00F3BB;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  header nav.desktop ul li a:active {
+    color: #060A24;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
   .intro-section {
-    margin: 20px 100px;
+    margin: 120px 200px 10px 200px;
   }
   .intro-section .title {
     font-size: 64px;
@@ -412,7 +456,7 @@ footer .redes .social img {
   }
   .container-polygon .poligono-episodios {
     height: 1042px;
-    padding: 186px 100px 232px 100px;
+    padding: 186px 200px 232px 200px;
     -webkit-clip-path: polygon(0% 120px, 100% 0%, 100% calc(100% - 120px), 0% 100%);
             clip-path: polygon(0% 120px, 100% 0%, 100% calc(100% - 120px), 0% 100%);
   }
@@ -475,7 +519,6 @@ footer .redes .social img {
     line-height: 24px;
   }
   .invitados {
-    padding: 0px 100px;
     margin: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -514,6 +557,7 @@ footer .redes .social img {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    padding: 0 200px;
   }
   .otros-temas h2 {
     font-size: 48px;
@@ -536,18 +580,17 @@ footer .redes .social img {
   .otros-temas .container-topics .box-temas {
     width: 220px;
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+  }
+  .otros-temas .container-topics .box-temas .topic-svg-container {
+    margin: 0 auto;
   }
   .otros-temas .container-topics .box-temas h3 {
-    width: 220px;
+    padding: 10px;
+    width: auto;
     font-size: 24px;
     line-height: 32px;
+    text-align: center;
+    margin: 0 auto;
   }
   .noticias {
     width: 100%;

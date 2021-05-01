@@ -3,6 +3,7 @@
     height: calc(auto - 200px);
     margin: 0 var(--margins) 30px var(--margins);
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     .img-origin {
         width:calc(100% - 16px);

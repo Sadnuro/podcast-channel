@@ -15,8 +15,11 @@ header {
     .logo {
         fill: var(--background-color);
     }
+    nav.desktop {
+        display: none;
+    }
     
-    nav {
+    nav.mobile {
         width: 100%;
         details {
             summary{
@@ -48,16 +51,16 @@ header {
                 flex-flow: column nowrap;
                 justify-content: space-around;
                 li {
-                    list-style: none;
+                    padding-left: 16px;
                     font-size: 16px;
                     line-height: 28px;
-                    text-align: center;
+                    text-align: left;
+                    list-style: none;
                     a {
                         color: white;
                     }
                 }
             } 
         }
-
     }
 }
