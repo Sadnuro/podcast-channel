@@ -1,0 +1,66 @@
+header {
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    svg{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+    }
+
+    .logo {
+        fill: var(--background-color);
+    }
+    .desktop {
+        display: none;        
+    }
+    
+    nav.mobile {
+        width: 100%;
+        details {
+            summary{
+                width: 25px;
+                height: 44px;
+                padding-top: 10px;
+                float: right;
+                list-style: none;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            summary:before {
+                content: "☰";
+            }
+            &[open] {
+                summary {
+                    padding-top: 5px;
+                }
+                summary:before{
+                    content: "×";
+                    font-size: 32px;
+                }
+            }
+            ul {
+                width: 100%;
+                height: 200px;
+                background: var(--gradient);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                li {
+                    padding-left: 16px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    text-align: left;
+                    list-style: none;
+                    a {
+                        color: white;
+                    }
+                }
+            } 
+        }
+    }
+}
