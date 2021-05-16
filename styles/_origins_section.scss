@@ -1,0 +1,19 @@
+.de-donde-venimos {
+    width: 100%;
+    height: calc(auto - 200px);
+    padding: 0 var(--margins) 30px var(--margins);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    .img-origin {
+        width:calc(100% - 16px);
+        position: relative;
+        top: -0px;
+        img {
+            width: 100%;
+        }
+    }
+    p {
+        margin-bottom: 20px;
+    }
+} 

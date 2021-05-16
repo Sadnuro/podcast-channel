@@ -1,0 +1,31 @@
+.container-polygon {
+    width: 100%;
+    height: 900px;
+    overflow:visible;
+}
+.poligono-episodios {
+    width: 100%;
+    padding: 100px var(--margins);
+    padding-bottom: 250px ;
+    clip-path: polygon(0% 60px, 100% 0%, 100% calc(100% - 60px), 0% 100%);
+    background: var(--gradient);
+    h2.title {
+        color: white;
+    }
+    .episodes-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .episode {
+            width: 100%;
+            height: 154px;
+            margin: 5px 0;
+            border-radius: 5px;
+            iframe {
+                width: 100%;
+                height: 100%;
+                overflow-y: hidden;
+            }
+        }
+    } 
+}
