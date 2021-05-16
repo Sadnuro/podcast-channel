@@ -1,7 +1,7 @@
 .de-donde-venimos {
     width: 100%;
     height: calc(auto - 200px);
-    margin: 0 var(--margins) 30px var(--margins);
+    padding: 0 var(--margins) 30px var(--margins);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -12,9 +12,6 @@
         img {
             width: 100%;
         }
-    }
-    .text {
-        padding-right: 16px;
     }
     p {
         margin-bottom: 20px;
