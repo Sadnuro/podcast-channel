@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@500&display=swap");
 :root {
   --background-color: #FFFFFF;
   --secondary-color: #00F3BB;
@@ -10,6 +12,7 @@
   --line-height: 24px;
   --font-size: 16px;
   --margins: 16px;
+  font-family: i;
 }
 
 * {
@@ -170,7 +173,7 @@ header nav.mobile details ul li a {
 
 .container-polygon {
   width: 100%;
-  height: 1242px;
+  height: 900px;
   overflow: visible;
 }
 
@@ -202,14 +205,21 @@ header nav.mobile details ul li a {
 
 .poligono-episodios .episodes-container .episode {
   width: 100%;
+  height: 154px;
   margin: 5px 0;
   border-radius: 5px;
+}
+
+.poligono-episodios .episodes-container .episode iframe {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .de-donde-venimos {
   width: 100%;
   height: calc(auto - 200px);
-  margin: 0 var(--margins) 30px var(--margins);
+  padding: 0 var(--margins) 30px var(--margins);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,10 +240,6 @@ header nav.mobile details ul li a {
 
 .de-donde-venimos .img-origin img {
   width: 100%;
-}
-
-.de-donde-venimos .text {
-  padding-right: 16px;
 }
 
 .de-donde-venimos p {
@@ -315,6 +321,11 @@ header nav.mobile details ul li a {
   margin-bottom: 50px;
 }
 
+.box-temas h3 {
+  width: 244px;
+  text-align: center;
+}
+
 .noticias {
   width: 100%;
   height: 341px;
@@ -370,8 +381,9 @@ footer .redes a {
   height: 38px;
 }
 
-footer .redes img {
-  width: 100%;
+footer .redes .social-logo {
+  font-size: 18px;
+  color: black;
 }
 
 @media screen and (min-width: 1024px) {
@@ -485,6 +497,10 @@ footer .redes img {
     width: 100%;
     height: 232px;
   }
+  .container-polygon .poligono-episodios .episodes-container .episode iframe {
+    width: 100%;
+    height: 100%;
+  }
   .de-donde-venimos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -540,7 +556,7 @@ footer .redes img {
   .invitados h2 {
     font-size: 48px;
     line-height: 64px;
-    padding-left: 100px;
+    padding-left: 200px;
   }
   .invitados .guests-images {
     display: -webkit-box;
@@ -664,6 +680,10 @@ footer .redes img {
   }
   footer .redes img {
     width: 100%;
+  }
+  footer .redes .social-logo {
+    font-size: 18px;
+    color: black;
   }
 }
 /*# sourceMappingURL=style.css.map */

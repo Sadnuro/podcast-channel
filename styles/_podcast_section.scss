@@ -1,6 +1,6 @@
 .container-polygon {
     width: 100%;
-    height: 1242px;
+    height: 900px;
     overflow:visible;
 }
 .poligono-episodios {
@@ -18,8 +18,14 @@
         align-items: center;
         .episode {
             width: 100%;
+            height: 154px;
             margin: 5px 0;
             border-radius: 5px;
+            iframe {
+                width: 100%;
+                height: 100%;
+                overflow-y: hidden;
+            }
         }
     } 
 }

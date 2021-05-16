@@ -95,7 +95,12 @@
                 .episode {
                     width: 100%;
                     height: 232px;
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
+                
             }
         }
     }
@@ -140,7 +145,7 @@
         h2 {
             font-size: 48px;
             line-height: 64px;
-            padding-left: 100px;
+            padding-left: 200px;
         }
         .guests-images {
             display: flex;
@@ -229,6 +234,10 @@
             height: 28px;
             img {
                 width: 100%;
+            }
+            .social-logo {
+                font-size: 18px;
+                color: black;
             }
         }
     }
